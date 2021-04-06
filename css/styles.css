@@ -1,7 +1,53 @@
-body {
-    position: relative;
+* {
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    margin: auto;
+}
+
+/******* grid *******/
+
+.grid-container {
+    display: grid;
+    margin: 25px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 25px;
+}
+
+/******* main *******/
+
+.card {
+    align-items: center;
+    align-content: space-evenly;
+    border: 1px solid #778;
+    border-radius: 5px;
+    display: grid;
+    height: 200px;
+    grid-template-rows: auto;
+
+}
+.card .avatar {
+    border-radius: 50%;
+    float: left;
+    grid-area: avatar;
+    height: 100px;
+    margin: auto;
+    width: 100px;
+}
+
+.card .text-container {
+    display: inline-block;
+    grid-area: avatar;
+}
+
+h1 {
+    text-transform: uppercase;
+    padding-left: 25px;
+}
 .overlay {
     position: absolute;
     top: 0;
@@ -23,13 +69,30 @@ body {
 }
 
 .modal-close {
+    border: none;
+    cursor: pointer;
     position: absolute;
     right: 15px;
     top: 5px;
-    cursor: pointer;
-    border: none;
 }
 
 .hidden {
     display: none;
+}
+
+/******* media queries *******/
+
+@media (min-width: 1024px) {
+    body {
+        margin: 40px;
+    }
+
+    .grid-container {
+        align-content: space-evenly;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: auto;
+        margin: auto;
+        max-width: 1700px;
+    }
 }
