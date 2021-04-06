@@ -5,7 +5,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     position: relative;
-    margin: auto;
+    padding-bottom: 40px;
 }
 
 /******* grid *******/
@@ -21,14 +21,15 @@ body {
 /******* main *******/
 
 .card {
-    align-items: center;
-    align-content: space-evenly;
-    border: 1px solid #778;
-    border-radius: 5px;
     display: grid;
-    height: 200px;
-    grid-template-rows: auto;
-
+    grid-template-areas:
+        "avatar text";
+    align-content: space-evenly;
+    align-items: center;
+    height: 125px;
+    border: 1.5px solid rgb(159, 159, 177);
+    border-radius: 5px;
+    width: 92%;
 }
 .card .avatar {
     border-radius: 50%;
@@ -41,13 +42,24 @@ body {
 
 .card .text-container {
     display: inline-block;
-    grid-area: avatar;
+    grid-area: text;
 }
 
 h1 {
     text-transform: uppercase;
     padding-left: 25px;
 }
+
+h2 {
+    font-size: 17px;
+}
+
+p {
+    font-size: 12px;
+    line-height: 0.5;
+    color: #778;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -93,6 +105,10 @@ h1 {
         grid-template-columns: 1fr 1fr 1fr ;
         grid-template-rows: auto;
         margin: auto;
-        max-width: 1700px;
+        max-width: 1200px;
+    }
+
+    h1 {
+        text-align: left;
     }
 }
