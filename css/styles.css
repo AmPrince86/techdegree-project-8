@@ -27,7 +27,7 @@ body {
     align-content: space-evenly;
     align-items: center;
     height: 125px;
-    border: 1.5px solid rgb(159, 159, 177);
+    border: 1px solid rgb(159, 159, 177);
     border-radius: 5px;
     width: 92%;
 }
@@ -48,6 +48,7 @@ body {
 h1 {
     text-transform: uppercase;
     padding-left: 25px;
+    color: #778;
 }
 
 h2 {
@@ -57,7 +58,7 @@ h2 {
 p {
     font-size: 12px;
     line-height: 0.5;
-    color: #778;
+    color: rgb(110, 110, 114);
 }
 
 .overlay {
